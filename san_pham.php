@@ -71,6 +71,12 @@ $dssp = LongDB::lay_dssp($page, $row_per_page); // danh sach san pham cua trang 
         }
         ?>
     </ul>
+   
+    <?php
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
+    echo date('\B\â\y \g\i\ờ \l\à \:  H \h i \p');
+    ?>
+    
 </body>
 
 </html>

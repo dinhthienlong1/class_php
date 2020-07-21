@@ -1,5 +1,6 @@
 <?php
 include "./LongDB2.php";
+
 $longdb2 = new LongDB2([
     'host' => 'localhost',
     'db' => 'long',
@@ -39,12 +40,14 @@ $dssp = $longdb2->lay_dssp($page, $row_per_page); // danh sach san pham cua tran
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="them.php">THEM MOI ngay sx</a>
     <h1>CLASS SÀI NEW</h1>
     <table>
         <thead>
             <tr>
                 <th>id_sp</th>
                 <th>ten</th>
+                <th>ngay_sx</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +56,9 @@ $dssp = $longdb2->lay_dssp($page, $row_per_page); // danh sach san pham cua tran
                 echo "<tr>";
                 echo "<td>" . $sp['id_sp'] . "</td>";
                 echo "<td>" . $sp['ten'] . "</td>";
+                echo "<td>" . $sp['ngay_sx'] . "</td>";
+                echo "<td><a href='update.php?id_sp=".$sp["id_sp"]."'>cap nhat</a></td>";
+                echo "<td><a href='xoa_date.php?id_sp=".$sp["id_sp"]."'>xoa</a></td>";
                 echo "</tr>";
             }
             ?>
